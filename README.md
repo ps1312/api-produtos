@@ -4,4 +4,4 @@ API criada em rails como teste para a Tracking Trade. A api conta com login atra
 
 A api também conta com alguns testes automatizados feitos com o [rspec](https://github.com/rspec/rspec-rails) e outras gems. Inicialmente essa api será utilizada como fonte de uma aplicação criada em angular.
 
-Link da api no heroku:  https://radiant-badlands-73836.herokuapp.com
+Link da api no heroku:  https://radiant-badlands-73836.herokuapp.com, lembrando que para acessar as funcionalidades da api  necessário utilizar a url /api/v1 antes da url dos controllers e ela não possui views a serem renderizadas em browsers
