@@ -1,5 +1,7 @@
 module Api::V1
     class ProdutosController < ApplicationController
+        before_action :authenticate_user!
+
         def index
             @categoria = Categoria.find(params[:categoria_id])
             render json: @categoria.produtos, status: :ok
