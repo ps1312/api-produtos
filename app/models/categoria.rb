@@ -1,4 +1,6 @@
 class Categoria < ApplicationRecord
+    acts_as_paranoid
+    
     # adiciona cascade no delete e associacao com produtos
     has_many :produtos, dependent: :destroy
 

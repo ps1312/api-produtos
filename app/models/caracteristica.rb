@@ -1,4 +1,6 @@
 class Caracteristica < ApplicationRecord
+  acts_as_paranoid
+  
   # associacao com produto
   belongs_to :produto
 

@@ -1,4 +1,6 @@
 class Produto < ApplicationRecord
+  acts_as_paranoid
+  
   # associacao com categoria
   belongs_to :categoria
 
