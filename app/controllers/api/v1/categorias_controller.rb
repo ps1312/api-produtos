@@ -1,5 +1,7 @@
 module Api::V1
     class CategoriasController < ApplicationController
+        before_action :authenticate_user!
+
         def index
             @categorias = Categoria.all
             render json: @categorias, status: :ok

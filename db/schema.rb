@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_28_195843) do
+ActiveRecord::Schema.define(version: 2018_10_28_200702) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,6 +39,10 @@ ActiveRecord::Schema.define(version: 2018_10_28_195843) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.datetime "deleted_at"
+    t.string "imagem_file_name"
+    t.string "imagem_content_type"
+    t.integer "imagem_file_size"
+    t.datetime "imagem_updated_at"
     t.index ["categoria_id"], name: "index_produtos_on_categoria_id"
     t.index ["deleted_at"], name: "index_produtos_on_deleted_at"
   end

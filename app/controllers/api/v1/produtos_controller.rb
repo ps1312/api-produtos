@@ -34,7 +34,7 @@ module Api::V1
 
         private
         def produtos_params
-            params.permit(:nome)
+            params.permit(:nome, :imagem)
         end
     end
 end
