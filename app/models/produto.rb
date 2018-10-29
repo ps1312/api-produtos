@@ -12,4 +12,25 @@ class Produto < ApplicationRecord
 
   # requere que o nome seja obrigatorio
   validates_presence_of :nome
+
+  def self.to_csv
+    attributes = %w{id
+                    nome
+                    categoria_id
+                    created_at
+                    updated_at
+                    deleted_at
+                    imagem_file_name
+                    imagem_content_type
+                    imagem_file_size
+                    imagem_updated_at}
+
+    CSV.generate(headers: true) do |csv|
+      csv << attributes
+
+      all.each do | produto |
+        csv << produto.attributes.values_at(*attributes)
+      end
+    end
+  end
 end

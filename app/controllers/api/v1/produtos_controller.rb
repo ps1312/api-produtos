@@ -4,7 +4,11 @@ module Api::V1
 
         def index
             @categoria = Categoria.find(params[:categoria_id])
-            render json: @categoria.produtos, status: :ok
+            @produtos = @categoria.produtos
+            respond_to do |format|
+                format.html { render json: @categoria.produtos, status: :ok }
+                format.csv { send_data @produtos.to_csv }
+            end
         end
 
         def show
