@@ -23,3 +23,5 @@
 /config/master.key
 
 /public
+
+/config/application.yaml

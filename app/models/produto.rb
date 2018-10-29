@@ -1,5 +1,5 @@
 class Produto < ApplicationRecord
-  has_attached_file :imagem, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
+  has_attached_file :imagem, styles: { medium: "300x300>", thumb: "100x100>" }
   validates_attachment_content_type :imagem, content_type: /\Aimage\/.*\z/
 
   acts_as_paranoid
@@ -12,6 +12,10 @@ class Produto < ApplicationRecord
 
   # requere que o nome seja obrigatorio
   validates_presence_of :nome
+
+  def imagem_url
+    imagem.url(:medium)
+  end
 
   def self.to_csv
     attributes = %w{id

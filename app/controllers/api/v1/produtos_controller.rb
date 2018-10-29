@@ -1,6 +1,5 @@
 module Api::V1
     class ProdutosController < ApplicationController
-        before_action :authenticate_user!
 
         def index
             @categoria = Categoria.find(params[:categoria_id])
@@ -14,7 +13,7 @@ module Api::V1
         def show
             @categoria = Categoria.find(params[:categoria_id])
             @produto = @categoria.produtos.find_by!(id: params[:id])
-            render json: @produto, status: :ok
+            render json: @produto.to_json(:methods => [:imagem_url]), status: :ok
         end
 
         def create

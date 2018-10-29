@@ -29,8 +29,9 @@ gem 'devise_token_auth'
 # Paranoia para soft_delete
 gem "paranoia", "~> 2.2"
 
-# Paperclip para receber files
+# Paperclip para receber files e aws-sdk para fileupload em um bucket s3
 gem "paperclip", "~> 6.0.0"
+gem "aws-sdk-s3"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
