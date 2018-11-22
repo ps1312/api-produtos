@@ -14,13 +14,13 @@ pipeline {
     }
     stage('install dependencies') {
       steps {
-        sh 'echo "bundle install"'
+        sh 'bundle install'
       }
     }
 
     stage('test') {
       steps {
-        sh 'echo "bundle install"'
+        sh 'rspec'
       }
     }
   }
