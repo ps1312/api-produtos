@@ -14,7 +14,7 @@ pipeline {
     }
     stage('install dependencies') {
       steps {
-        sh 'bundle install'
+        sh 'bundle install rake db:drop rake db:create rake db:migrate'
       }
     }
 
