@@ -1,7 +1,5 @@
 module Api::V1
     class CaracteristicasController < ApplicationController
-        before_action :authenticate_user!
-
         def index
             @categoria = Categoria.find(params[:categoria_id])
             @produto = @categoria.produtos.find_by!(id: params[:produto_id])

@@ -1,7 +1,5 @@
 module Api::V1
     class CategoriasController < ApplicationController
-        before_action :authenticate_user!
-
         def index
             @categorias = Categoria.all
             render json: @categorias, status: :ok
@@ -31,5 +29,5 @@ module Api::V1
         def categoria_params
             params.permit(:nome)
         end
-    end    
+    end
 end

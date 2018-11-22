@@ -1,6 +1,5 @@
 module Api::V1
     class ProdutosController < ApplicationController
-
         def index
             @categoria = Categoria.find(params[:categoria_id])
             @produtos = @categoria.produtos
