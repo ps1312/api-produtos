@@ -6,7 +6,7 @@ pipeline {
   }
 
   environment {
-    RAILS_ENV=test
+    RAILS_ENV='test'
   }
 
   stages {
