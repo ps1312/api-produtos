@@ -3,6 +3,10 @@ pipeline {
     docker {
       image 'ruby:2.5.3'
     }
+
+    environment{
+      RAILS_ENV=test
+    }
   }
 
   stages {
