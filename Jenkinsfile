@@ -3,11 +3,7 @@ pipeline {
     docker {
       image 'ruby:2.5.3'
     }
-
   }
-  environment {
-        BUNDLE_PATH = '/var/lib/jenkins/workspace/app-pipeline/vendor/cache'
-    }
 
   stages {
     stage('build') {
