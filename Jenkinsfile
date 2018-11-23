@@ -5,6 +5,10 @@ pipeline {
     }
 
   }
+  environment {
+        BUNDLE_PATH = '/var/lib/jenkins/workspace/app-pipeline/vendor/cache'
+    }
+
   stages {
     stage('build') {
       steps {
