@@ -30,7 +30,7 @@ pipeline {
 
     stage('build image docker') {
       steps {
-        sh 'sudo docker build -t apiprodutos .'
+        sh 'docker build -t apiprodutos .'
       }
     }
   }
