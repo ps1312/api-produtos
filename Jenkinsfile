@@ -18,7 +18,7 @@ pipeline {
     }
     stage('install dependencies') {
       steps {
-        sh 'rails db:migrate RAILS_ENV=test'
+        sh 'rake db:migrate RAILS_ENV=test'
         sh 'bundle install --path vendor/bundle; bundle exec rake db:drop; bundle exec rake db:create; bundle exec rake db:migrate'
       }
     }
