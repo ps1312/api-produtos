@@ -25,7 +25,7 @@ pipeline {
 
     stage('test') {
       steps {
-        sh 'rspec'
+        sh 'bundle exec rspec'
       }
     }
   }
