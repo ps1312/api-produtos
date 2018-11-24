@@ -6,6 +6,7 @@ pipeline {
   }
 
   environment {
+    BUNDLE_PATH='vendor/cache'
     RAILS_ENV='test'
   }
 
