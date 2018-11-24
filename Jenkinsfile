@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'joaopaulolins/apiprodutos'
+      image 'joaopaulolins/apiprodutos:devops'
     }
   }
 
