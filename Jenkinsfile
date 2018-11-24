@@ -1,9 +1,5 @@
 pipeline {
-  agent {
-    docker {
-      image 'ruby:2.5.3'
-    }
-  }
+  agent { dockerfile true }
 
   environment {
     BUNDLE_PATH='vendor/cache'
