@@ -19,7 +19,7 @@ pipeline {
     }
     stage('install dependencies') {
       steps {
-        sh 'bundle install --path vendor/bundle; rake db:drop; rake db:create; rake db:migrate'
+        sh 'bundle install --path vendor/bundle; bundle exec rake db:drop; bundle exec rake db:create; bundle exec rake db:migrate'
       }
     }
 
