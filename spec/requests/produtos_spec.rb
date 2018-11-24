@@ -13,7 +13,7 @@ RSpec.describe 'API Produtos' do
 
     context 'when categoria exists' do
       it 'returns status code 200' do
-        expect(response).to have_http_status(404)
+        expect(response).to have_http_status(200)
       end
 
       it 'returns all categoria items' do
