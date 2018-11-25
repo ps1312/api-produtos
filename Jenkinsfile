@@ -3,7 +3,7 @@ pipeline {
 
   stages {
 
-    stage('test') {
+    stage('Test') {
       steps {
         sh 'bundle exec rspec'
       }
